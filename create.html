@@ -1,0 +1,18 @@
+{% extends "ticts/base.html" %} 
+{% load crispy_forms_tags %}
+<!-- Content Block -->
+{% block content %}
+<!-- Search Tickets Form -->
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Add Ticket</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-grouo">
+            <button class="btn btn-outline-info" type="submit">Save</button>
+
+        </div>
+    </form>
+{% endblock content %}
+<!-- END Content Block Here-->
